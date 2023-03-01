@@ -12,8 +12,7 @@ const render = require('./src/page-template.js');
 
 let team = [];
 
-start();
-function start() {
+function init() {
   inquirer
     .prompt([
       {
@@ -117,7 +116,7 @@ function intern() {
       {
         type: 'input',
         name: 'school',
-        message: `Intern's school`,
+        message: `Intern's school:`,
       },
     ])
     .then((resp) => {
@@ -148,18 +147,10 @@ function addEmployee() {
     });
 }
 
-// function generateFile() {
-//   if (!fs.existsSync(OUTPUT_DIR)) {
-//     fs.mkdirSync(OUTPUT_DIR);
-//   } else {
-//     fs.writeFileSync(outputPath, render(team), 'UTF-8');
-//     console.log('File has been created.');
-//   }
-// }
+init();
 
 function generateFile() {
   const html = render(team);
-  const outputPath = path.resolve(__dirname, 'output', 'team.html');
   fs.writeFile(outputPath, html, (err) => {
     if (err) throw err;
     console.log(`Team profile successfully generated at ${outputPath}`);
