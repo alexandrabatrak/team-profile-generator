@@ -4,7 +4,7 @@ const Intern = require('./lib/Intern');
 const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
-const prettyhtml = require('html');
+const { html_beautify } = require('js-beautify');
 
 const OUTPUT_DIR = path.resolve(__dirname, 'output');
 const outputPath = path.join(OUTPUT_DIR, 'team.html');
@@ -120,8 +120,7 @@ const createEmployee = (role, EmployeeType) => {
 
 const generateFile = () => {
   const html = render(team);
-  // https://stackoverflow.com/questions/12875375/module-for-pretty-printing-html
-  let betterhtml = prettyhtml.prettyPrint(html, { indent_size: 2 });
+  const betterhtml = html_beautify(html, { indent_size: 2 });
   fs.writeFile(outputPath, betterhtml, (err) => {
     if (err) throw err;
     console.log(`Team profile successfully generated at ${outputPath}`);
@@ -134,7 +133,7 @@ const init = () => {
       {
         type: 'confirm',
         name: 'createTeam',
-        message: 'Would you like to generate a team profile?',
+        message: 'Would you like to create a team?',
       },
     ])
     .then((resp) => {
