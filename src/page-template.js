@@ -4,7 +4,7 @@ const css = fs.readFileSync('./src/style.css', 'utf-8');
 
 const year = new Date().getFullYear();
 
-const generateTeam = (team, teamName) => {
+const generateTeam = (team) => {
   // creates the manager html
   const generateManager = (manager) => {
     return `
@@ -125,7 +125,6 @@ const generateTeam = (team, teamName) => {
   };
 
   const html = [];
-
   html.push(
     team
       .filter((employee) => employee.getRole() === 'Manager')
@@ -177,9 +176,6 @@ module.exports = (team) => {
                 </div>
                 <div class="content col-sm-12 col-md-9">
                     <div class="container">
-                        <div class="row">
-                            <h2 class="team-name">${teamName}</h2>
-                        </div>
                         <div class="row">
                             <div class="team-area py-5">
                             ${generateTeam(team)}
