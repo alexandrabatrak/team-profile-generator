@@ -3,7 +3,7 @@ body {
 }
 
 a {
-  color: #9aab94;
+  color: #91aa97;
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: all 0.4s cubic-bezier(1, 0.43, 0, 1.24);
@@ -24,10 +24,17 @@ a:hover {
 
 .team-heading h1 {
   -webkit-text-stroke: 1px black;
-  color: #9aab94;
+  color: #91aa97;
   font-size: 4rem;
   font-weight: 600;
   word-break: break-word;
+  transition: all 0.4s ease-in-out;
+}
+
+.team-heading h1:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-fill-color: transparent;
+  transform: translatex(15px) scale(1.2);
 }
 
 .team-area {
@@ -36,18 +43,18 @@ a:hover {
 }
 
 .card {
-  border: 2px dotted #cec4c2;
+  border: 2px solid black;
   min-height: 230px;
   transition: box-shadow 0.3s cubic-bezier(1, 0.43, 0, 1.24),
     transform 0.3s cubic-bezier(1, 0.43, 0, 1.24);
 }
 
 .card-header {
-  background: #9aab94;
+  background: #91aa97;
 }
 
 .manager .card-header {
-  border: 2px dotted #9aab94;
+  border: 2px dotted #91aa97;
 }
 
 .card .thumbnail {
@@ -69,7 +76,7 @@ a:hover {
 }
 
 .card:hover .card-header {
-  border-color: #9aab94;
+  border-color: #91aa97;
 }
 
 h3.card-title {
@@ -77,7 +84,7 @@ h3.card-title {
 }
 
 footer {
-  border-top: 2px dotted #9aab94;
+  border-top: 2px dotted #91aa97;
 }
 
 /* https://www.30secondsofcode.org/css/s/polka-dot-pattern */
@@ -86,7 +93,7 @@ footer {
   width: 25%;
   height: 100%;
   background-color: #ffffff;
-  background-image: radial-gradient(#9aab94 7%, transparent 8%);
+  background-image: radial-gradient(#91aa97 7%, transparent 8%);
   background-size: 50px 50px;
   background-repeat: repeat;
 }

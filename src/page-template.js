@@ -188,9 +188,9 @@ module.exports = (team) => {
             </div>
         </div>
     </main>
-    <footer class="p-5 bg-white z-1">
+    <footer class="p-3 bg-white z-1">
         <div class="container">
-            <p class="text-end">
+            <p class="mb-0 text-end">
                 Made with ❤ & <a href="https://github.com/alexandrabatrak/team-profile-generator">Team profile generator</a>. Copyright &copy; ${year} <a href="https://github.com/alexandrabatrak">Alexandra Batrak</a>
             </p>
         </div>
