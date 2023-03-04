@@ -8,8 +8,8 @@
 
 1. [Installation](#installation)
 2. [Usage](#usage)
-3. [Tools](#tools)
-4. [Features](#features)
+3. [Tests](#tests)
+4. [Tools](#tools)
 5. [Credits](#credits)
 6. [Contributing](#contributing)
 
@@ -41,16 +41,24 @@ You will then be prompted for all the information about the project.
 
 Full preview video available [here](https://drive.google.com/file/d/1MvTq6E86IUz2eA6WB46SCcGHqV1GEJet/view)
 
+## Tests
+
+Application utilises Jest for perfoming tests. Testing done with:
+
+```
+npm test
+```
+
 ## Tools
 
 <div>
-<img src="https://github.com/devicons/devicon/blob/master/icons/css3/html5-original.svg"  title="HTML" alt="html" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg"  title="HTML" alt="html" width="40" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg"  title="CSS3" alt="CSS3" width="40" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original.svg"  title="Bootstrap" alt="Bootstrap" width="40" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" title="NodeJS" alt="NodeJS" width="40" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/npm/npm-original-wordmark.svg"  title="npm" alt="npm" width="40" height="40"/>&nbsp;
-<img src="https://github.com/devicons/devicon/blob/master/icons/npm/jest-plain.svg"  title="jest" alt="jest" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/jest/jest-plain.svg"  title="jest" alt="jest" width="40" height="40"/>&nbsp;
 </div>
 
 ## Credits
