@@ -37,9 +37,9 @@ node index.js
 
 You will then be prompted for all the information about the project.
 
-![preview](./assets/images/screenshot.png)
+![preview](./assets/screenshot.png)
 
-Full preview video available [here](https://drive.google.com/file/d/1MvTq6E86IUz2eA6WB46SCcGHqV1GEJet/view)
+Full preview video available [here](link)
 
 ## Tests
 
