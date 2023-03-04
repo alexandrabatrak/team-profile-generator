@@ -126,18 +126,18 @@ const generateTeam = (team) => {
 
   const html = [];
   html.push(
-    team
+    team.teamMembers
       .filter((employee) => employee.getRole() === 'Manager')
       .map((manager) => generateManager(manager))
   );
   html.push(
-    team
+    team.teamMembers
       .filter((employee) => employee.getRole() === 'Engineer')
       .map((engineer) => generateEngineer(engineer))
       .join('')
   );
   html.push(
-    team
+    team.teamMembers
       .filter((employee) => employee.getRole() === 'Intern')
       .map((intern) => generateIntern(intern))
       .join('')
@@ -171,7 +171,9 @@ module.exports = (team) => {
             <div class="row">
                 <div class="col-sm-12 col-md-3 m-0 p-0 h-100">
                     <div class="team-heading">
-                        <h1 class="py-5 px-3 text-lowercase">My Team</h1>
+                        <h1 class="py-5 px-3 text-lowercase">${
+                          team.teamName
+                        }</h1>
                     </div>
                 </div>
                 <div class="content col-sm-12 col-md-9">
@@ -186,10 +188,10 @@ module.exports = (team) => {
             </div>
         </div>
     </main>
-    <footer class="p-5">
+    <footer class="p-5 bg-white z-1">
         <div class="container">
-            <p>
-                Made with <a href="https://github.com/alexandrabatrak/team-profile-generator">Team profile generator</a> Copyright &copy; ${year} <a href="https://github.com/alexandrabatrak">Alexandra Batrak</a>
+            <p class="text-end">
+                Made with ❤ & <a href="https://github.com/alexandrabatrak/team-profile-generator">Team profile generator</a>. Copyright &copy; ${year} <a href="https://github.com/alexandrabatrak">Alexandra Batrak</a>
             </p>
         </div>
     </footer>

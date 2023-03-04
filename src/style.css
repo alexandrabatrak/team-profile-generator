@@ -27,6 +27,7 @@ a:hover {
   color: #9aab94;
   font-size: 4rem;
   font-weight: 600;
+  word-break: break-word;
 }
 
 .team-area {
