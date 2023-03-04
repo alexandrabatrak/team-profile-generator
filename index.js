@@ -11,7 +11,25 @@ const outputPath = path.join(OUTPUT_DIR, 'team.html');
 
 const render = require('./src/page-template.js');
 
-const team = [];
+const team = {
+  teamName: '',
+  teamMembers: [],
+};
+
+const teamName = () => {
+  inquirer
+    .prompt([
+      {
+        type: 'input',
+        name: 'teamName',
+        message: `What's the name of the team?`,
+      },
+    ])
+    .then((resp) => {
+      team.teamName = resp.teamName;
+      createManager();
+    });
+};
 
 const createManager = () => {
   inquirer
@@ -39,7 +57,7 @@ const createManager = () => {
     ])
     .then((resp) => {
       const manager = new Manager(resp.name, resp.id, resp.email, resp.number);
-      team.push(manager);
+      team.teamMembers.push(manager);
       addEmployee();
     });
 };
@@ -113,7 +131,7 @@ const createEmployee = (role, EmployeeType) => {
         resp.email,
         resp[role.toLowerCase() === 'engineer' ? 'github' : 'school']
       );
-      team.push(employee);
+      team.teamMembers.push(employee);
       addEmployee();
     });
 };
@@ -138,7 +156,7 @@ const init = () => {
     ])
     .then((resp) => {
       if (resp.createTeam) {
-        createManager();
+        teamName();
       }
     });
 };
