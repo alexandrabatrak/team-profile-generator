@@ -11,6 +11,17 @@ const outputPath = path.join(OUTPUT_DIR, 'team.html');
 
 const render = require('./src/page-template.js');
 
+// utility fn for validation
+const validateEmail = (email) => {
+  const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+  return emailRegex.test(email) || 'Please enter a valid email address';
+};
+
+const validateNumber = (number) => {
+  return Number.isInteger(Number(number)) || 'Please enter a valid number';
+};
+
+// team object
 const team = {
   teamName: '',
   teamMembers: [],
@@ -23,6 +34,13 @@ const teamName = () => {
         type: 'input',
         name: 'teamName',
         message: `What's the name of the team?`,
+        validate: (input) => {
+          if (input.length > 70) {
+            return 'Please enter a team name with less than 70 characters(including spaces).';
+          }
+          return true;
+        },
+        default: 'My team',
       },
     ])
     .then((resp) => {
@@ -43,16 +61,31 @@ const createManager = () => {
         type: 'input',
         name: 'id',
         message: `Manager's ID number:`,
+        validate: validateNumber,
       },
       {
         type: 'input',
         name: 'email',
         message: `Manager's email:`,
+        validate: validateEmail,
       },
       {
         type: 'input',
         name: 'number',
         message: `Manager's office phone number:`,
+        validate: (input) => {
+          // remove non-digits
+          const officeNumber = input.replace(/\D/g, '');
+          if (officeNumber.length !== 11 || officeNumber.charAt(0) !== '0') {
+            return 'Please enter a valid UK phone number.';
+          }
+          return true;
+        },
+        // format it with the UK phone format
+        filter: (input) => {
+          const officeNumber = input.replace(/\D/g, '');
+          return `${officeNumber.slice(0, 5)} ${officeNumber.slice(5)}`;
+        },
       },
     ])
     .then((resp) => {
@@ -99,11 +132,13 @@ const createEmployee = (role, EmployeeType) => {
         type: 'input',
         name: 'id',
         message: `${role}'s ID number:`,
+        validate: validateNumber,
       },
       {
         type: 'input',
         name: 'email',
         message: `${role}'s email:`,
+        validate: validateEmail,
       },
       ...(role === 'Engineer'
         ? [
@@ -141,7 +176,7 @@ const generateFile = () => {
   const betterhtml = html_beautify(html, { indent_size: 2 });
   fs.writeFile(outputPath, betterhtml, (err) => {
     if (err) throw err;
-    console.log(`Team profile successfully generated at ${outputPath}`);
+    console.log(`✔️ Team profile successfully generated at ${outputPath}`);
   });
 };
 
