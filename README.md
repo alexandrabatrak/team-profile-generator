@@ -44,7 +44,7 @@ You will then be prompted for all the information about the project.
 Your generated file will use pre-existing template:
 ![preview](./assets/screenshot.png)
 
-Full preview video available [here](link)
+Full preview video available [here](https://watch.screencastify.com/v/iOWKGNdIb61XXDFtwLPO)
 
 ## Tests
 
