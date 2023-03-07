@@ -4,6 +4,10 @@
 
 ## About
 
+This CLI node.js application generates an HTML file that displays essential information about a software engineering team's employees, such as their emails and GitHub profiles. Team generator prompts the user with _Inquirer_ to provide details about the employees.
+
+_Application is passing all the provided tests._
+
 ## Table of Contents
 
 1. [Installation](#installation)
@@ -37,6 +41,7 @@ node index.js
 
 You will then be prompted for all the information about the project.
 
+Your generated file will use pre-existing template:
 ![preview](./assets/screenshot.png)
 
 Full preview video available [here](link)
