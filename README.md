@@ -39,12 +39,15 @@ The application can be invoked in the root directory of the application with the
 node index.js
 ```
 
-You will then be prompted for all the information about the project.
-
-Your generated file will use pre-existing template:
-![preview](./assets/screenshot.png)
+You will then be prompted for all the information about the project. 
 
 Full preview video available [here](https://watch.screencastify.com/v/iOWKGNdIb61XXDFtwLPO)
+
+Your generated file will use pre-existing template:
+
+![preview](./assets/screenshot.png)
+### [View it live :star:](https://alexandrabatrak.github.io/team-profile-generator/)
+
 
 ## Tests
 
