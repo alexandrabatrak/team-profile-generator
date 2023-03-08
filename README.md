@@ -92,6 +92,8 @@ Contributions are always welcome!
 - Push to the branch (`git push origin feature/newfeature`)
 - Open a Pull Request
 
+[![Image of github-profile-views-counter](https://github.com/alexandrabatrak/github-profile-views-counter/blob/master/svg/607919212/badge.svg)](https://github.com/alexandrabatrak/github-profile-views-counter/blob/master/readme/607919212/week.md)
+
 Copyright &copy; 2023 [:octocat:@alexandrabatrak](https://github.com/alexandrabatrak)
 
 <hr><p style="text-align:right; font-style:italic">This README was generated with ❤️ by <a href="https://github.com/alexandrabatrak/readme-generator">readme-generator</a></p>
