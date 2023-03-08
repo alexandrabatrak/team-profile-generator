@@ -54,6 +54,8 @@ Application utilises Jest for perfoming tests. Testing done with:
 npm test
 ```
 
+![tests-passing](./assets/tests-passed.png)
+
 ## Tools
 
 <div>
